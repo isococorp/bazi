@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #000000;
+  padding: 20px;
+  max-width: 950px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: #f1c40f;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* ฟอร์มกรอกข้อมูล */
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: #0a0a0a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #aaa;
+  font-size: 14px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #f1c40f;
+}
+
+/* Error styles */
+.input-error {
+  border-color: #e74c3c !important;
+  background-color: #1a0505 !important;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 14px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Kanit', sans-serif;
+  transition: 0.3s;
+}
+
+.btn-calc {
+  background-color: #c0392b;
+  border: 1px solid #e74c3c;
+}
+.btn-calc:hover {
+  background-color: #e74c3c;
+}
+
+.btn-print {
+  background-color: #2980b9;
+  border: 1px solid #3498db;
+}
+.btn-print:hover {
+  background-color: #3498db;
+}
+
+/* ส่วนแสดงผลข้อมูล */
+.result-container {
+  margin-top: 20px;
+}
+
+.user-info {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #ddd;
+}
+
+/* ตารางดวง */
+.bazi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #000;
+  margin-bottom: 20px;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+}
+
+.bazi-cell {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  min-height: 130px;
+  position: relative;
+}
+
+/* ฟอนต์ภาษาจีน Kaiti */
+.char-cn {
+  font-family: 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-size: 85px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* คำอ่าน + คะแนน */
+.char-th-score {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.char-th-score.dimmed {
+  color: #666;
+}
+
+/* สัตว์นักษัตร */
+.char-animal {
+  font-size: 13px;
+  color: #888;
+}
+
+/* กล่องสรุปผลรวม */
+.summary-box {
+  display: flex;
+  justify-content: space-around;
+  background: #050505;
+  border: 1px dashed #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.summary-box strong {
+  color: #f1c40f;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.summary-box .total-value {
+  color: #00ff55;
+}
+
+/* โหงวเฮ้งใบหน้า */
+.face-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+  border: 1px solid #222;
+  padding: 20px;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.face-profile img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  border: 2px solid #444;
+}
+
+.face-info {
+  flex: 1;
+}
+
+.face-info h3 {
+  color: #f1c40f;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.face-info p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* สีธาตุ */
+.text-wood {
+  color: #00ff55;
+}
+.text-fire {
+  color: #ff3333;
+}
+.text-earth {
+  color: #ffcc00;
+}
+.text-metal {
+  color: #ffffff;
+}
+.text-water {
+  color: #33ccff;
+}
+
+/* header เสา ยาม/วัน/เดือน/ปี (แต่ละเซลล์ 1 คอลัมน์) */
+.bazi-col-header {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 7px 10px;
+  background: #0a0a0a;
+  color: #f1c40f;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* แถว label คั่นใน bazi-grid (span ทั้ง 4 คอลัมน์) */
+.bazi-section-label {
+  grid-column: 1 / -1;
+  padding: 7px 10px;
+  background: #0a0a0a;
+  color: #888;
+  font-size: 13px;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* เซลล์แถวถ่อฮวย (เล็กกว่าแถวหลัก) */
+.bazi-cell-sm {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+}
+
+.bazi-cell-sm-label {
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* อักษรจีนขนาดเล็ก */
+.char-cn-sm {
+  font-family: 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-size: 52px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* กล่องข้อมูล เทียนอิกกุ้ยนั้ง / ซาฮะ */
+.special-info-box {
+  background: #050505;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.special-info-title {
+  color: #888;
+  font-size: 13px;
+  white-space: nowrap;
+  min-width: 200px;
+}
+
+.special-info-items {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.special-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.special-info-item .char-cn-sm {
+  font-size: 44px;
+}
+
+.special-info-item-sub {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ============================================================= */
+/* วัยจร (大运 / Da Yun)                                         */
+/* ============================================================= */
+
+/* wrapper รองรับ scroll แนวนอนบน mobile */
+.dayun-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* header แสดงชื่อหัวข้อ + ทิศทาง + อายุเริ่มต้น */
+.dayun-header {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dayun-title {
+  color: #f1c40f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dayun-subtitle {
+  color: #888;
+  font-size: 13px;
+}
+
+/* ตาราง 10 คอลัมน์ */
+.dayun-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(78px, 1fr));
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  min-width: 780px;
+}
+
+/* เซลล์แถว A (กิ่งฟ้า) */
+.dayun-cell {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+/* เซลล์อายุ/ปี (แถวล่างสุด) */
+.dayun-cell-age {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+  gap: 2px;
+}
+
+.dayun-age-range {
+  font-size: 13px;
+  color: #f1c40f;
+  font-weight: 600;
+}
+
+.dayun-year-range {
+  font-size: 11px;
+  color: #666;
+}
+
+/* Print */
+@media print {
+  body {
+    background: black;
+    color: white;
+    padding: 0;
+  }
+  .container {
+    padding: 0;
+    background: black;
+    max-width: 100%;
+  }
+  .grid-form,
+  .btn-group,
+  h2 {
+    display: none;
+  }
+  .result-container {
+    display: block !important;
+    border: none;
+  }
+  .bazi-grid {
+    border-top: 1px solid #444;
+    border-left: 1px solid #444;
+  }
+  .bazi-cell {
+    border-right: 1px solid #444;
+    border-bottom: 1px solid #444;
+    background-color: #000 !important;
+  }
+  .summary-box,
+  .face-profile {
+    border: 1px solid #444;
+  }
+  .char-cn {
+    text-shadow: none;
+  }
+}
