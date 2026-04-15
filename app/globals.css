@@ -436,6 +436,217 @@ button {
   color: #666;
 }
 
+/* ============================================================= */
+/* Responsive — Tablet (max 768px)                               */
+/* ============================================================= */
+@media (max-width: 768px) {
+  body {
+    padding: 14px;
+  }
+
+  .container {
+    padding: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* ฟอนต์จีนหลักเล็กลงเล็กน้อย */
+  .char-cn {
+    font-size: 68px;
+    margin-bottom: 8px;
+  }
+
+  .bazi-cell {
+    padding: 14px 6px;
+    min-height: 100px;
+  }
+
+  /* กล่องสรุป: เรียงแนวตั้ง */
+  .summary-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .summary-box strong {
+    font-size: 20px;
+  }
+
+  /* กล่อง special info: เรียงแนวตั้ง */
+  .special-info-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .special-info-title {
+    min-width: unset;
+  }
+}
+
+/* ============================================================= */
+/* Responsive — Mobile (max 480px)                               */
+/* ============================================================= */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  /* ฟอร์ม: เปลี่ยนเป็น 1 คอลัมน์ */
+  .grid-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  /* full-width span กลับเป็น 1 คอลัมน์ */
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  select {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  /* ปุ่ม: เรียงแนวตั้ง */
+  .btn-group {
+    flex-direction: column;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* ข้อมูลผู้ใช้ */
+  .user-info {
+    font-size: 13px;
+  }
+
+  /* ตาราง 4 เสา: ลดขนาดอักษรจีนให้พอดีหน้าจอแคบ */
+  .char-cn {
+    font-size: 52px;
+    margin-bottom: 6px;
+  }
+
+  .bazi-cell {
+    padding: 10px 4px;
+    min-height: 80px;
+  }
+
+  .char-th-score {
+    font-size: 11px;
+  }
+
+  .char-animal {
+    font-size: 11px;
+  }
+
+  /* header เสา */
+  .bazi-col-header {
+    font-size: 12px;
+    padding: 5px 4px;
+  }
+
+  .bazi-section-label {
+    font-size: 11px;
+    padding: 5px 4px;
+  }
+
+  /* แถวถ่อฮวย */
+  .char-cn-sm {
+    font-size: 38px;
+  }
+
+  .bazi-cell-sm {
+    padding: 8px 4px;
+  }
+
+  .bazi-cell-sm-label {
+    font-size: 10px;
+  }
+
+  /* กล่องสรุป */
+  .summary-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .summary-box strong {
+    font-size: 18px;
+  }
+
+  /* กล่อง special info */
+  .special-info-box {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .special-info-title {
+    min-width: unset;
+    font-size: 12px;
+  }
+
+  .special-info-item .char-cn-sm {
+    font-size: 36px;
+  }
+
+  .special-info-items {
+    gap: 16px;
+  }
+
+  /* วัยจร header */
+  .dayun-header {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .dayun-title {
+    font-size: 14px;
+  }
+
+  .dayun-subtitle {
+    font-size: 12px;
+  }
+
+  /* โหงวเฮ้ง */
+  .face-profile {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .face-info h3 {
+    font-size: 16px;
+  }
+
+  .face-info p {
+    font-size: 13px;
+  }
+}
+
+/* ============================================================= */
 /* Print */
 @media print {
   body {
