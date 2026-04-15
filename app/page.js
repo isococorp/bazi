@@ -7,6 +7,7 @@
 import { useState, useEffect } from 'react';
 import { calculateBazi, formatScore, monthNames } from './lib/baziData';
 import { calculateDayun } from './lib/dayunData';
+import { APP_VERSION } from './lib/version';
 
 export default function Home() {
   // --- State: ข้อมูลฟอร์ม ---
@@ -120,8 +121,9 @@ export default function Home() {
   // =========================================================================
   return (
     <div className="container">
-      {/* ชื่อโปรแกรม */}
+      {/* ชื่อโปรแกรม + เวอร์ชัน */}
       <h2>โปรแกรมผูกดวงจีน โป๊ยยี่สี่เถียว </h2>
+      <div className="app-version">v{APP_VERSION}</div>
 
       {/* ============================================================= */}
       {/* ฟอร์มกรอกข้อมูล (Grid 2 คอลัมน์) */}
