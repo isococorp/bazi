@@ -1,3 +1,13 @@
+/* ฟอนต์ภาษาจีน ZCOOL XiaoWei (self-hosted จาก /public/fonts/) */
+@font-face {
+  font-family: 'ZCOOL XiaoWei';
+  src: url('/fonts/kaiti.woff2') format('woff2'),
+       url('/fonts/kaiti.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -164,9 +174,9 @@ button {
   position: relative;
 }
 
-/* ฟอนต์ภาษาจีน Kaiti */
+/* ฟอนต์ภาษาจีน ZCOOL XiaoWei */
 .char-cn {
-  font-family: 'Ma Shan Zheng', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-family: 'ZCOOL XiaoWei', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
   font-size: 85px;
   font-weight: normal;
   line-height: 1;
@@ -316,7 +326,7 @@ button {
 
 /* อักษรจีนขนาดเล็ก */
 .char-cn-sm {
-  font-family: 'Ma Shan Zheng', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-family: 'ZCOOL XiaoWei', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
   font-size: 52px;
   font-weight: normal;
   line-height: 1;
