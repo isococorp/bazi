@@ -166,7 +166,7 @@ button {
 
 /* ฟอนต์ภาษาจีน Kaiti */
 .char-cn {
-  font-family: 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-family: 'Ma Shan Zheng', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
   font-size: 85px;
   font-weight: normal;
   line-height: 1;
@@ -316,7 +316,7 @@ button {
 
 /* อักษรจีนขนาดเล็ก */
 .char-cn-sm {
-  font-family: 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
+  font-family: 'Ma Shan Zheng', 'Kaiti SC', 'STKaiti', 'Kaiti', 'KaiTi', '楷体', 'BiauKai', serif;
   font-size: 52px;
   font-weight: normal;
   line-height: 1;
